@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package com.example.protos;
+
+// The log file analyzer service definition.
+service LogFileAnalyzer {
+  // Sends an input
+  rpc checkFunction (Input) returns (Output) {}
+}
+
+// The request message containing the time and delta.
+message Input {
+  string timedelta = 1;
+}
+
+// The response message containing the results
+message Output {
+  string message = 1;
+}
